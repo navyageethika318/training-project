@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital ID Generator</title>
+    <link rel="stylesheet" href="id.css">
+</head>
+<body>
+    <header>
+        <h1>Digital ID Generator</h1>
+    </header>
+    <main class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+
+            <form id="idForm">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="role">Role / Designation</label>
+                <input type="text" id="role" placeholder="e.g. Student, Employee" required>
+
+                <label for="department">Department</label>
+                <input type="text" id="department" placeholder="Enter department" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email address" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+
+                <label for="photo">Profile Photo</label>
+                <input type="file" id="photo" accept="image/*">
+
+                <button type="submit">Generate Digital ID</button>
+                <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+            </form>
+        </section>
+        <section class="preview-section">
+            <h2>ID Card Preview</h2>
+            <div class="id-card" id="idCard">
+                <div class="card-header">
+                    <h2>DIGITAL ID</h2>
+                    <span>IDENTITY CARD</span>
+                </div>
+                <div class="card-body">
+                    <div class="photo-container">
+                        <img id="cardPhoto"
+                             src="https://via.placeholder.com/120"
+                             alt="Profile Photo">
+                    </div>
+                    <div class="details">
+                        <h2 id="cardName">Your Name</h2>
+                        <p>
+                            <strong>ID:</strong>
+                            <span id="cardId">ID-000000</span>
+                        </p>
+                        <p>
+                            <strong>Role:</strong>
+                            <span id="cardRole">Your Role</span>
+                        </p>
+                        <p>
+                            <strong>Department:</strong>
+                            <span id="cardDepartment">Department</span>
+                        </p>
+                        <p>
+                            <strong>Email:</strong>
+                            <span id="cardEmail">example@email.com</span>
+                        </p>
+                        <p>
+                            <strong>Phone:</strong>
+                            <span id="cardPhone">0000000000</span>
+                        </p>
+                        <p>
+                            <strong>DOB:</strong>
+                            <span id="cardDob">DD/MM/YYYY</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>Digital Identity System</span>
+                    <span>Valid ID</span>
+                </div>
+            </div>
+            <button id="downloadBtn" class="download-btn">Download ID Card</button>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="id.js"></script>
+</body>
+</html>
